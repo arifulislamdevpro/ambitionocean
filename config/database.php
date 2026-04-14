@@ -114,6 +114,17 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'zk' => [
+            'driver' => 'sqlsrv', // or mysql (depends on your ZKTeco DB)
+            'host' => env('ZK_DB_HOST', '127.0.0.1'),
+            'port' => env('ZK_DB_PORT', '1433'),
+            'database' => env('ZK_DB_DATABASE', 'ZKTime'),
+            'username' => env('ZK_DB_USERNAME', 'sa'),
+            'password' => env('ZK_DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+        ],
+
     ],
 
     /*

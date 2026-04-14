@@ -308,11 +308,15 @@ return [
             'route' => 'dashboard',
             'icon' => 'fas fa-fw fa-tachometer-alt',
         ],
-        ['header' => 'Management'],
+        [
+            'header' => 'Management',
+            'can' => 'manage-admin-modules'
+        ],
         [
             'text' => 'Departments',
             'route' => 'departments.index',
-            'icon' => 'fas fa-fw fa-building',
+            'icon' => 'fas fa-fw fa-building'
+            // 'can' => 'manage-admin-modules'
         ],
         [
             'text' => 'Projects',
@@ -323,6 +327,29 @@ return [
             'text' => 'Employees',
             'route' => 'employees.index',
             'icon' => 'fas fa-fw fa-users',
+            'can' => 'manage-admin-modules'
+        ],
+        [
+            'text' => 'Attendances',
+            'route' => 'attendances.index',
+            'icon' => 'fas fa-fw fa-clock',
+            'can' => 'manage-admin-modules'
+        ],
+        [
+            'header' => 'Security & Roles',
+            'can' => 'manage-admin-modules'
+        ],
+        [
+            'text' => 'Users',
+            'route' => 'users.index',
+            'icon' => 'fas fa-fw fa-users-cog',
+            'can' => 'manage-admin-modules'
+        ],
+        [
+            'text' => 'Roles',
+            'route' => 'roles.index',
+            'icon' => 'fas fa-fw fa-user-shield',
+            'can' => 'manage-admin-modules'
         ],
         ['header' => 'Account'],
         [
